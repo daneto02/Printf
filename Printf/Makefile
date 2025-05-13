@@ -6,18 +6,18 @@
 #    By: daneto <daneto@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:08:13 by daneto            #+#    #+#              #
-#    Updated: 2025/05/12 20:48:10 by daneto           ###   ########.fr        #
+#    Updated: 2025/05/13 10:58:03 by daneto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-CC = CC
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 COMPRESS = ar rcs
 COMPILE = $(CC) $(CFLAGS) -c
 
-SRC = ft_printf.c ft_auxi.c ft_putchar ft_puthex.c ft_putnbr.c ft_putptr.c \
+SRCS =	ft_printf.c ft_auxi.c ft_putchar.c ft_puthex.c ft_putnbr.c ft_putptr.c \
 		ft_putstr.c ft_putuint.c
 
 OBJS = $(SRCS:.c=.o)

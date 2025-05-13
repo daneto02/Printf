@@ -6,7 +6,7 @@
 /*   By: daneto <daneto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 13:27:36 by daneto            #+#    #+#             */
-/*   Updated: 2025/05/12 20:49:25 by daneto           ###   ########.fr       */
+/*   Updated: 2025/05/13 11:08:31 by daneto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# define HEX_UPP_BASE "0123456789ABCDEF"
-# define HEX_LOW_BASE "0123456789abcdef"
 
 int ft_printf(char const *str, ...);
 

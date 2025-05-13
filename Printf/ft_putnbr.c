@@ -6,11 +6,11 @@
 /*   By: daneto <daneto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:35:44 by daneto            #+#    #+#             */
-/*   Updated: 2025/05/12 19:41:01 by daneto           ###   ########.fr       */
+/*   Updated: 2025/05/13 11:01:08 by daneto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void ft_putnbr(int num, size_t *counter)
 {
