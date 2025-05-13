@@ -6,7 +6,7 @@
 /*   By: daneto <daneto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 16:09:33 by daneto            #+#    #+#             */
-/*   Updated: 2025/05/12 20:25:51 by daneto           ###   ########.fr       */
+/*   Updated: 2025/05/13 14:05:40 by daneto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,24 @@ int ft_printf(char const *str, ...)
     va_list va;
     size_t counter;
 
-    if(!str)
-        return (0);
+    if (!str || write(1, "", 0) == -1)
+        return (-1);
     counter = 0;
     va_start(va, str);
-    while(*str)
+    while (*str)
     {
-        if(*str == '%')
+        if (*str == '%' && *(str + 1))
         {
+            ft_find_format(va, (char *)(++str), &counter);
             str++;
-            ft_find_format(va, (char *)str, &counter);
         }
+        else if (*str == '%' && !*(str + 1))
+            return(-1);
         else
+        {
             ft_putchar(*str, &counter);
-        str++;
+            str++;
+        }
     }
     va_end(va);
     return (counter);

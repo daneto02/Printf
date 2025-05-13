@@ -32,6 +32,5 @@ int main(void)
 
     ft_printf("ft_printf %%\n");
     printf("printf %%\n");
-
     return (0);
 }
